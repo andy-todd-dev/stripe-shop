@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
-import "./index.css";
 
 import { About } from "./pages/About";
 import { Store } from "./pages/Store";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/Home.tsx";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export interface PageData {
   path: string;
@@ -15,7 +16,6 @@ export interface PageData {
 }
 
 const pages: PageData[] = [
-
   {
     path: "/",
     element: <Home />,

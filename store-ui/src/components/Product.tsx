@@ -1,4 +1,5 @@
 import React from "react";
+import { Card, Button } from "react-bootstrap";
 
 interface ProductProps {
   name: string;
@@ -7,11 +8,13 @@ interface ProductProps {
 
 const Product: React.FC<ProductProps> = ({ name, price }) => {
   return (
-    <div className="product">
-      <h3>{name}</h3>
-      <p>Price: ${price}</p>
-      <button>Add to Cart</button>
-    </div>
+    <Card className="mb-3">
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>Price: ${price}</Card.Text>
+        <Button variant="primary">Add to Cart</Button>
+      </Card.Body>
+    </Card>
   );
 };
 

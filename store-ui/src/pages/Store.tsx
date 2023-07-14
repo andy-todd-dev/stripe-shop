@@ -1,5 +1,8 @@
 import React from "react";
 
+import products from "../data/products.json";
+import ProductList from "../components/ProductList";
+
 export const Store: React.FC = () => {
-  return <div>store!</div>;
+  return <ProductList products={products} />;
 };
